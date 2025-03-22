@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/color.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="./images/harry-potter-glasses-icon.png">
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0,0,27,255);">
+    <div class="container-fluid">
+        <!-- Navbar Brand with Custom Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="images/brand-logo.png" alt="Logo" class="d-inline-block align-text-top" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 viewBox%3D%220 0 30 30%22%3E%3Cpath stroke%3D%22rgba%28255, 255, 255, 1%29%22 stroke-width%3D%222%22 d%3D%22M4 7h22M4 15h22M4 23h22%22/%3E%3C/svg%3E');"></span>
+        </button>           
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-light" href="challenges.html">Fitness Challenges</a>
+                </li>
+                <!-- Diagon Alley Dropdown -->
+                <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="diagonAlleyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Diagon Alley
+                    </a>
+                    <ul class="dropdown-menu bg-light">
+                        <li><a class="dropdown-item text-dark" href="wandShop.html">Wand Shop</a></li>
+                        <li><a class="dropdown-item text-dark" href="potionShop.html">Potion Shop</a></li>
+                        <li><a class="dropdown-item text-dark" href="spellShop.html">Spell Shop</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link text-light" href="duel.html">Duelling Club</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a id="vaultButton" class="nav-link text-light d-none" href="vault.html">Vault</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="profileButton" class="nav-link text-light d-none" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="logoutButton" class="nav-link text-light d-none" href="index.html">Logout</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="loginButton" class="nav-link text-light" href="login.html">Login</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="registerButton" class="btn btn-primary rounded-pill" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Main Content with Background -->
+  <div style="min-height: 100vh;">
+
+    <!-- Header -->
+    <header class="p-4 text-center">
+      <h1>Your Profile</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+
+        <!-- User Info Section -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card bg-dark text-white border-light mb-4 shadow-sm w-100">
+            <div class="card-body position-relative">
+              <h3 class="card-title text-center mb-4">User Info</h3>
+              <i id="editButton" class="bi bi-pencil-square position-absolute top-0 end-0 m-3"
+                style="cursor: pointer;"></i>
+              <div id="userInfoDisplay" class="text-center">
+                <!-- Profile Picture -->
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle"
+                    style="width: 80px; height: 80px; object-fit: cover; border: 2px solid #ffffff;">
+                </div>
+                <!-- Dynamic User Info -->
+                <p class="mb-2">
+                  <span class="d-block">
+                    <strong>User ID:</strong> <span id="userId" class="text-light"></span>
+                  </span>
+                </p>
+                <p class="mb-2">
+                  <span class="d-block">
+                    <strong>Username:</strong> <span id="displayUsername" class="text-light"></span>
+                  </span>
+                </p>
+                <p class="mb-2">
+                  <span class="d-block">
+                    <strong>Email:</strong> <span id="userEmail" class="text-light"></span>
+                  </span>
+                </p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="images/coin.png" alt="Coin Icon" style="width: 32px; height: 32px; margin-right: 8px;">
+                  <span class="badge bg-warning text-dark px-3 py-2 d-flex align-items-center">
+                    <strong>Skillpoints:</strong> <span id="skillpoints" class="ms-2"></span>
+                  </span>
+                </div>
+              </div>
+              <form id="userInfoForm" class="mt-4 d-none">
+                <div class="mb-3">
+                  <label for="username" class="form-label">New Username</label>
+                  <input type="text" id="username" class="form-control bg-dark text-white border-light">
+                </div>
+                <button type="button" id="saveButton" class="btn btn-primary w-100">Edit Username</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hogwarts House Section -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card bg-dark text-white border-light mb-4 shadow-sm w-100">
+            <div class="card-body text-center">
+              <h3 class="card-title">Hogwarts House</h3>
+              <img id="houseEmblem" class="house-emblem" src="images/hogwarts-houses.png" alt="Default House Emblem">
+              <div id="houseSection">
+                <p id="houseMessage">The Sorting Hat awaits! You haven't been sorted into a house yet. Tap below to
+                  embark on your magical journey and choose your Hogwarts House! 🪄</p>
+                <button type="button" id="chooseHouseButton" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal"
+                  data-bs-target="#houseModal">
+                  <strong>Choose House</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity History Section -->
+          <div class="col-12">
+            <div class="card bg-dark text-white border-light shadow-sm mb-5">
+              <div class="card-body">
+                <h3 class="card-title text-center mb-4">Activity History</h3>
+                <div class="table-responsive">
+                  <table class="table table-dark table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th class="custom-header" scope="col">Date</th>
+                        <th class="custom-header" scope="col">Activity Type</th>
+                        <th class="custom-header" scope="col">Activity Detail</th>
+                        <th class="custom-header" scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="activityHistoryTable">
+                      <!-- JavaScript will dynamically populate rows here -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- House Selection Modal -->
+      <div class="modal fade" id="houseModal" tabindex="-1" aria-labelledby="houseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="houseModalLabel">Choose Your House</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-center">Get ready to be sorted into your house! Choose wisely, as this decision will shape your magical journey!</p>
+              <p class="text-warning text-center"><strong>Note: You can only choose your house once, and you cannot change it after selection.</strong></p>
+              <div class="row" id="houseSelectionContainer">
+                <!-- Houses will be dynamically inserted here by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Floating Review Icon -->
+      <div class="floating-review" data-bs-toggle="tooltip" data-bs-placement="top"
+        title="Rate your experience: Leave a Review!" onclick="window.location.href='owlPost.html'"
+        style="background-color: rgb(88,92,252);">
+        <i class="bi bi-chat-right-text-fill" style="font-size: 25px;"></i>
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-center py-3 bg-dark text-white">
+        <div class="container">
+          <div class="row">
+            <!-- Footer Content -->
+            <div class="col-12 col-md-8 mx-auto">
+              <p class="mb-1">© 2025 Yip Jay Ying, Class DAAA/FT/1B/07. All rights reserved.</p>
+              <p class="mb-1">This project is a Back-End Web Development assignment inspired by the magical world of
+                Harry Potter, created by J.K. Rowling.</p>
+              <p class="mb-1">It is not affiliated with or endorsed by J.K. Rowling or Warner Bros.</p>
+              <p class="mb-0">
+                Visit the
+                <a href="https://www.wizardingworld.com/" target="_blank" class="text-light">Official Wizarding
+                  World</a>
+                for more magical content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/queryCmds.js" type="text/javascript"></script>
+      <script src="js/getCurrentURL.js" type="text/javascript"></script>
+      <script src="js/userNavbarToggle.js" type="text/javascript"></script>
+      <script src="js/activityHistory.js" type="text/javascript"></script>
+      <script src="js/editUserInfo.js" type="text/javascript"></script>
+      <script src="js/houseSelection.js"></script>
+      <script src="js/userInfoDisplay.js" type="text/javascript"></script>
+      <script src="js/sessionManager.js"></script>
+  </body>
+</html>

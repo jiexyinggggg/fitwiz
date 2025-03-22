@@ -1,0 +1,176 @@
+body {
+    font-family: 'Bookman Old Style', 'Palatino Linotype', 'Cambria', 'Lucida Bright', 'Century Schoolbook', 'Times New Roman'; /* Set the font family for the entire page */
+    background-image: url('../images/background.jpeg'); /* Background image for the body */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep background fixed while scrolling */
+}
+
+.btn-primary {
+    border: none; /* Remove border for primary buttons */
+}
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for scaling and shadow effects */
+    margin: auto; /* Center cards horizontally */
+}
+
+.custom-card:hover {
+    transform: scale(1.035); /* Slightly enlarge the card on hover */
+}
+
+.custom-card img {
+    object-fit: contain; /* Maintain aspect ratio of the image */
+    height: 150px; /* Set fixed height for images */
+    margin-bottom: 1rem; /* Add spacing below the image */
+}
+
+.custom-tabs {
+    justify-content: center; /* Center-align tabs */
+}
+
+.custom-tabs .nav-link {
+    border-radius: 0.5rem; /* Rounded corners for tab links */
+    margin: 0 5px; /* Add spacing between tabs */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Add initial transition to all cards in the duel modal */
+#duelModal .card {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth and natural easing for card animations */
+}
+
+/* Hover effect for duel cards in the modal */
+#duelModal .card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.filter {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Floating review container */
+.floating-review {
+    position: fixed; /* Fix position to bottom-right corner */
+    bottom: 20px; /* Distance from bottom of the viewport */
+    right: 20px; /* Distance from right of the viewport */
+    width: 60px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    border-radius: 50%; /* Circular shape */
+    display: flex; /* Center content within the container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure container is above other elements */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+/* Scale effect on hover for the floating review container */
+.floating-review:hover {
+    transform: scale(1.1); /* Slightly enlarge the container on hover */
+}
+
+.house-emblem {
+    width: 120px; /* Fixed width for house emblems */
+    height: 120px; /* Fixed height for house emblems */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Add initial transition to all cards in the house modal */
+#houseModal .card {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth and natural easing for card animations */
+}
+
+/* Hover effect for house cards in the modal */
+#houseModal .card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.input-group .form-control {
+    border-right: none !important; /* Remove right border for input field */
+    border-radius: 0.5rem 0 0 0.5rem !important; /* Round left corners only */
+}
+
+.input-group-text {
+    border-left: none !important; /* Remove left border for input group text */
+    border-radius: 0 0.5rem 0.5rem 0 !important; /* Round right corners only */
+}
+
+/* Icon inside the button */
+.review-icon {
+    width: 30px; /* Fixed width for review icons */
+    height: 30px; /* Fixed height for review icons */
+}
+
+/* Message card container */
+.message-card {
+    position: fixed; /* Keeps the card fixed on the viewport */
+    top: 10px; /* Positions the card 10px from the top of the page */
+    left: 50%; /* Centers the card horizontally */
+    transform: translateX(-50%); /* Adjusts position for perfect centering */
+    z-index: 1100; /* Ensures the card is displayed above other elements */
+    padding: 15px 20px; /* Adds space inside the card for better readability */
+    border-radius: 5px; /* Adds rounded corners for a modern look */
+    font-size: 16px; /* Sets a readable font size */
+    text-align: center; /* Centers text inside the card */
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-out effect */
+}
+
+/* Fade-out effect for message cards */
+.message-card.fade-out {
+    opacity: 0; /* Makes the card fully transparent */
+}
+
+/* Navbar Brand Logo */
+.navbar-brand img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover scaling */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+/* Navbar Links */
+.nav-link {
+    transition: color 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effects */
+    font-weight: 500; /* Set medium font weight */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+}
+
+/* Hover Effect for Links */
+.nav-link:hover {
+    transform: translateY(-2px); /* Move link slightly upwards on hover */
+}
+
+/* Dropdown Menu */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+    animation: fadeIn 0.4s ease-in-out; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with invisible */
+        transform: translateY(10px); /* Slight downward position */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move back to original position */
+    }
+}
+
+/* Styling for "No activity history found." message */
+.no-activity-message {
+    text-align: center !important; /* Center the text */
+    font-style: italic !important; /* Italicize the text */
+    font-weight: bold !important; /* Make text bold */
+    font-size: 1.1rem !important; /* Slightly larger font size */
+    padding: 15px 0 !important; /* Add vertical padding */
+}
+
+/* Placeholder styling for input fields in the review form */
+#reviewForm input::placeholder,
+#reviewForm textarea::placeholder {
+    opacity: 0.8 !important; /* Ensure placeholder text is semi-transparent */
+}

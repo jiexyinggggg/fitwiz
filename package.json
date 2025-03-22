@@ -1,0 +1,40 @@
+{
+  "name": "bed-ca2-jiexyinggggg",
+  "version": "1.0.0",
+  "description": "BED CA2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init_tables": "node ./src/configs/initTables",
+    "start": "node index",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ST0503-BED/bed-ca2-jiexyinggggg.git"
+  },
+  "keywords": [
+    "dotenv",
+    "express",
+    "fitnesschallenge",
+    "mysql2",
+    "nodemon",
+    "nodejs",
+    "bcrypt",
+    "jsonwebtoken"
+  ],
+  "author": "Yip Jay Ying (P2438276, DAAA/FT/1B/07)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ST0503-BED/bed-ca2-jiexyinggggg/issues"
+  },
+  "homepage": "https://github.com/ST0503-BED/bed-ca2-jiexyinggggg#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9"
+  }
+}

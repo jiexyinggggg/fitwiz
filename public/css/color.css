@@ -1,0 +1,180 @@
+:root {
+    /* Define custom CSS variables for colors and styling */
+    --custom-color: rgb(88, 92, 252); /* Primary color */
+    --custom-color-light: rgb(130, 132, 252); /* Lighter shade for active states */
+    --custom-color-darker: rgba(88, 92, 252, 0.8); /* Hover color */
+    --custom-text-color: white; /* Text color */
+    --custom-filter-option-bg-color: white; /* Background color for dropdown options */
+    --custom-placeholder-color: rgba(255, 255, 255, 0.6); /* Placeholder text color */
+    --custom-border-color: rgba(255, 255, 255, 0.2); /* Light white border */
+    --custom-card-hover-shadow: rgba(0, 0, 0, 0.3); /* Shadow for hover effect on cards */
+    --custom-filter-option-text-color: black; /* Text color for dropdown options */
+    --custom-bg-color: rgba(0, 0, 27, 0.9); /* Background color */
+}
+
+.btn-primary {
+    /* Customize primary button styles */
+    --bs-btn-bg: var(--custom-color) !important; /* Primary button background color */
+    --bs-btn-active-bg: var(--custom-color-light) !important; /* Button background color when active */
+    --bs-btn-hover-bg: var(--custom-color-darker) !important; /* Button background color on hover */
+    --bs-btn-color: var(--custom-text-color) !important; /* Button text color */
+}
+
+.custom-card {
+    /* Card styles */
+    background-color: var(--custom-bg-color) !important; /* Background color for cards */
+    color: var(--custom-text-color) !important; /* Text color for cards */
+    border: 2px solid var(--custom-border-color); /* Add border color */
+}
+
+.custom-card:hover {
+    /* Card styles on hover */
+    box-shadow: 0 8px 15px var(--custom-card-hover-shadow) !important; /* Add shadow effect on card hover */
+    border-color: var(--custom-color); /* Use primary color on hover */
+}
+
+.custom-header {
+    /* Header styles with primary background color */
+    background-color: var(--custom-color) !important;
+}
+
+.custom-tabs {
+    /* Custom styling for tabs with a bottom border */
+    border-bottom: 2px solid var(--custom-border-color) !important;
+}
+
+.custom-tabs .nav-link {
+    /* Default tab link styles */
+    background-color: var(--custom-bg-color) !important; /* Background color for inactive tabs */
+    color: var(--custom-text-color) !important; /* Text color for inactive tabs */
+}
+
+.custom-tabs .nav-link.active {
+    /* Active tab link styles */
+    background-color: var(--custom-color) !important; /* Background color for active tab */
+    color: var(--custom-text-color) !important; /* Text color for active tab */
+    border-color: var(--custom-color) var(--custom-border-color) var(--custom-border-color) !important; /* Border colors for active tab */
+}
+
+.custom-tabs .nav-link:hover {
+    /* Hover styles for tab links */
+    background-color: var(--custom-color-darker) !important; /* Background color on hover */
+    color: var(--custom-text-color) !important; /* Text color on hover */
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus {
+    /* Hover and focus styles for dropdown items */
+    background-color: var(--custom-color-light) !important;
+    color: var(--custom-text-color) !important;
+}
+
+.filter:hover {
+    /* Hover effect for filter elements */
+    background-color: var(--custom-color) !important;
+    color: var(--custom-text-color) !important;
+}
+
+.filter option {
+    /* Dropdown option styles */
+    background-color: var(--custom-filter-option-bg-color) !important; /* Background color for options */
+    color: var(--custom-filter-option-text-color) !important; /* Text color for options */
+}
+
+.modal-footer a.text-primary {
+    /* Primary text color for links in modal footer */
+    color: var(--custom-color) !important;
+}
+
+::placeholder {
+    /* Placeholder text color */
+    color: var(--custom-placeholder-color) !important;
+}
+
+/* Gryffindor Button */
+.btn-gryffindor {
+    background-color: #d82626; /* Gryffindor red */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+}
+
+.btn-gryffindor:hover {
+    background-color: #a11c1c; /* Darker red on hover */
+}
+
+/* Hufflepuff Button */
+.btn-hufflepuff {
+    background-color: #f4c430; /* Hufflepuff yellow */
+    color: black; /* Text color */
+    border: none; /* Remove border */
+}
+
+.btn-hufflepuff:hover {
+    background-color: #c3a021; /* Darker yellow on hover */
+}
+
+/* Ravenclaw Button */
+.btn-ravenclaw {
+    background-color: #2a4d9b; /* Ravenclaw blue */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+}
+
+.btn-ravenclaw:hover {
+    background-color: #1c356a; /* Darker blue on hover */
+}
+
+/* Slytherin Button */
+.btn-slytherin {
+    background-color: #2a623d; /* Slytherin green */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+}
+
+.btn-slytherin:hover {
+    background-color: #1b422a; /* Darker green on hover */
+}
+
+/* Floating review container */
+.floating-review {
+    /* Add shadow for floating review containers */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Success message styling */
+.message-card.alert-success {
+    background-color: #d4edda; /* Light green background for success */
+    color: #155724; /* Dark green text for contrast */
+    border: 1px solid #c3e6cb; /* Green border for emphasis */
+}
+
+/* Warning message styling */
+.message-card.alert-warning {
+    background-color: #fff3cd; /* Light yellow background for warnings */
+    color: #856404; /* Dark yellow text for readability */
+    border: 1px solid #ffeeba; /* Yellow border for emphasis */
+}
+
+/* Danger message styling */
+.message-card.alert-danger {
+    background-color: #f8d7da; /* Light red background for errors */
+    color: #721c24; /* Dark red text for contrast */
+    border: 1px solid #f5c6cb; /* Red border for emphasis */
+}
+
+.nav-link:hover, 
+.nav-link:focus {
+    /* Hover and focus styles for navigation links */
+    color: var(--custom-color-light) !important;
+}
+
+/* Styling for "No activity history found." message */
+.no-activity-message {
+    color: #ffcc00 !important; /* Highlighted yellow color for no activity message */
+}
+
+/* Placeholder styling for input fields in the review form */
+#reviewForm input::placeholder,
+#reviewForm textarea::placeholder {
+    color: #120000 !important; /* Set placeholder text color to a dark shade */
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/color.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="./images/harry-potter-glasses-icon.png">
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0,0,27,255);">
+    <div class="container-fluid">
+        <!-- Navbar Brand with Custom Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="images/brand-logo.png" alt="Logo" class="d-inline-block align-text-top" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 viewBox%3D%220 0 30 30%22%3E%3Cpath stroke%3D%22rgba%28255, 255, 255, 1%29%22 stroke-width%3D%222%22 d%3D%22M4 7h22M4 15h22M4 23h22%22/%3E%3C/svg%3E');"></span>
+        </button>           
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-light" href="challenges.html">Fitness Challenges</a>
+                </li>
+                <!-- Diagon Alley Dropdown -->
+                <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="diagonAlleyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Diagon Alley
+                    </a>
+                    <ul class="dropdown-menu bg-light">
+                        <li><a class="dropdown-item text-dark" href="wandShop.html">Wand Shop</a></li>
+                        <li><a class="dropdown-item text-dark" href="potionShop.html">Potion Shop</a></li>
+                        <li><a class="dropdown-item text-dark" href="spellShop.html">Spell Shop</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link text-light" href="duel.html">Duelling Club</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a id="vaultButton" class="nav-link text-light d-none" href="vault.html">Vault</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="profileButton" class="nav-link text-light d-none" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="logoutButton" class="nav-link text-light d-none" href="index.html">Logout</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="loginButton" class="nav-link text-light" href="login.html">Login</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="registerButton" class="btn btn-primary rounded-pill" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+<!-- Vault Section -->
+<div style="min-height: 100vh;">
+    <div class="container py-5">
+      <!-- Page Header -->
+      <header class="text-center text-white mb-4">
+        <h1>Vault</h1>
+        <p class="lead">Explore and manage your magical collection, from wands to potions and spells.</p>
+      </header>
+
+      <!-- Filter Dropdown -->
+      <div class="d-flex justify-content-center mb-4">
+        <select class="filter form-select w-auto" id="itemFilter" aria-label="Filter by Item Type">
+          <option value="wands">Wands</option>
+          <option value="potions">Potions</option>
+          <option value="spells">Spells</option>
+        </select>
+      </div>
+
+      <!-- Vault Items -->
+      <div class="row g-4 justify-content-center" id="vaultItems">
+        <!-- JavaScript will dynamically populate vault items here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Review Icon -->
+  <div class="floating-review" data-bs-toggle="tooltip" data-bs-placement="top" title="Rate your experience: Leave a Review!" onclick="window.location.href='owlPost.html'" style="background-color: rgb(88,92,252);">
+    <i class="bi bi-chat-right-text-fill" style="font-size: 25px;"></i>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <!-- Footer Content -->
+        <div class="col-12 col-md-8 mx-auto">
+          <p class="mb-1">© 2025 Yip Jay Ying, Class DAAA/FT/1B/07. All rights reserved.</p>
+          <p class="mb-1">This project is a Back-End Web Development assignment inspired by the magical world of Harry Potter, created by J.K. Rowling.</p>
+          <p class="mb-1">It is not affiliated with or endorsed by J.K. Rowling or Warner Bros.</p>
+          <p class="mb-0">
+            Visit the 
+            <a href="https://www.wizardingworld.com/" target="_blank" class="text-light">Official Wizarding World</a> 
+            for more magical content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/queryCmds.js" type="text/javascript"></script>
+  <script src="js/getCurrentURL.js" type="text/javascript"></script>
+  <script src="js/userNavbarToggle.js" type="text/javascript"></script>
+  <script src="js/vault.js" type="text/javascript"></script>
+  <script src="js/sessionManager.js"></script>
+</body>
+</html>
